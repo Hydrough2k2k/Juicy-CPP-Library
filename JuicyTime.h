@@ -34,8 +34,8 @@ using std::chrono::nanoseconds;
 
 namespace JuicyTime {
 
-	typedef enum timeFormat { TimeFormat_NanoSec, TimeFormat_MicroSec, TimeFormat_MilliSec, TimeFormat_Seconds, TimeFormat_Minutes, TimeFormat_Hours, TimeFormat_Days };
-	typedef enum dateFormat { DateFormat_yyyy_mm_dd, DateFormat_yy_mm_dd, DateFormat_dd_mm_yyyy, DateFormat_dd_mm_yy, DateFormat_mm_dd_yyyy, DateFormat_mm_dd_yy };
+	typedef enum timeFormat { TimeF_NanoSec, TimeF_MicroSec, TimeF_MilliSec, TimeF_Seconds, TimeF_Minutes, TimeF_Hours, TimeF_Days };
+	typedef enum dateFormat { DateF_yyyy_mm_dd, DateF_yy_mm_dd, DateF_dd_mm_yyyy, DateF_dd_mm_yy, DateF_mm_dd_yyyy, DateF_mm_dd_yy };
 
 	struct timeStruct { unsigned int days, hours, minutes, seconds, milliSec, microSec, nanoSec; };
 	const std::string months[12] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun,", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
@@ -149,7 +149,7 @@ namespace JuicyTime {
 	}
 
 	// Return a given time unit, seconds by default, eg. 9.723
-	double getElapsedTime(unsigned int timerID = 0, timeFormat format = TimeFormat_Seconds) {
+	double getElapsedTime(unsigned int timerID = 0, timeFormat format = TimeF_Seconds) {
 		if (initialisedTimers <= timerID) return 0; // Insert Error Code TBD
 
 		std::chrono::steady_clock::time_point timeNow = high_resolution_clock::now();
