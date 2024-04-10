@@ -34,7 +34,6 @@ using std::chrono::nanoseconds;
 
 namespace JuicyTime {
 
-	//typedef enum JTimeErr {  };
 	typedef enum timeFormat { TimeFormat_NanoSec, TimeFormat_MicroSec, TimeFormat_MilliSec, TimeFormat_Seconds, TimeFormat_Minutes, TimeFormat_Hours, TimeFormat_Days };
 	typedef enum dateFormat { DateFormat_yyyy_mm_dd, DateFormat_yy_mm_dd, DateFormat_dd_mm_yyyy, DateFormat_dd_mm_yy, DateFormat_mm_dd_yyyy, DateFormat_mm_dd_yy };
 
